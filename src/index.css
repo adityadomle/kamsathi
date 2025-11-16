@@ -1,3 +1,69 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 240 7% 5%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 6% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 6% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 48 91% 55%;
+    --primary-foreground: 240 7% 5%;
+
+    --secondary: 240 5% 12%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 5% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 48 91% 55%;
+    --accent-foreground: 240 7% 5%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5% 15%;
+    --input: 240 5% 15%;
+    --ring: 48 91% 55%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 240 7% 5%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 48 91% 55%;
+    --sidebar-primary-foreground: 240 7% 5%;
+    --sidebar-accent: 240 5% 12%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 5% 15%;
+    --sidebar-ring: 48 91% 55%;
+
+    /* Custom tokens */
+    --hero-gradient: linear-gradient(135deg, hsl(240, 7%, 5%) 0%, hsl(240, 6%, 8%) 100%);
+    --card-hover: 240 5% 10%;
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-outfit;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-outfit;
+  }
+}
